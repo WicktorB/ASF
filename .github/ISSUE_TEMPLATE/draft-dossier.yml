@@ -1,0 +1,22 @@
+name: "4 · Draft scenario dossier"
+description: Draft At a glance, 3.1, 3.2 and 3.3 from the validated guide. Assign to Copilot (skill draft-scenario-dossier).
+title: "[scenario] <slug> · dossier draft"
+labels: [scenario, step-5]
+body:
+  - type: input
+    id: slug
+    attributes: { label: Scenario slug }
+    validations: { required: true }
+  - type: input
+    id: prefix
+    attributes: { label: Decision ID prefix, placeholder: "SEG" }
+    validations: { required: true }
+  - type: textarea
+    id: owners
+    attributes: { label: Section owners, description: "3.1 PO · 3.2 UX · 3.3 architecture lead (GitHub accounts)" }
+    validations: { required: true }
+  - type: textarea
+    id: arch
+    attributes: { label: Architecture inputs in inputs/ (optional) }
+  - type: markdown
+    attributes: { value: "Skill: `draft-scenario-dossier`. Reviewers: PO, UX, architecture lead, each on their section." }

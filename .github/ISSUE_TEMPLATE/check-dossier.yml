@@ -1,0 +1,14 @@
+name: "5 · Check dossier before design review"
+description: Pre-check the dossier against the five dimensions and the catalogues; fill the checklist. Assign to Copilot (skill check-design-review).
+title: "[scenario] <slug> · checklist"
+labels: [scenario, step-6]
+body:
+  - type: input
+    id: slug
+    attributes: { label: Scenario slug }
+    validations: { required: true }
+  - type: input
+    id: review
+    attributes: { label: Design review date }
+  - type: markdown
+    attributes: { value: "Skill: `check-design-review`. Reviewer: design authority, which gives the verdict." }

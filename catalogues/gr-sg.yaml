@@ -1,0 +1,68 @@
+# Catalogue GR · Guardrails, SG · Safeguards. Dimension D5 · Guardrails and safeguards.
+catalogue: GR-SG
+title: Guardrails and safeguards
+dimension: D5
+check_before_design_review: [GR-01, GR-02, GR-05, SG-01, SG-02, SG-03, SG-04]
+guardrails:
+  - id: GR-01
+    rule: Confirm before any CRM write
+    means: [AI proposes values, The user accepts edits or rejects, One change confirmed in one step]
+    applies_to: [UP-07, UP-09]
+    how_to_check: Confirmation screen shown in the design
+    status: Proposed
+  - id: GR-02
+    rule: Same access rights as the user
+    means: [The agent reads and writes only what the user is allowed to, No technical account that sees more]
+    applies_to: [All usage patterns]
+    how_to_check: Access model described, with no technical super-user
+    status: To confirm
+  - id: GR-03
+    rule: Agreed decision scope
+    means: [No forecast judgment, No recommendation without a method or a plan to compare against]
+    applies_to: [All usage patterns]
+    how_to_check: Out-of-scope answers defined
+    status: Proposed
+  - id: GR-04
+    rule: Say "I don't know"
+    means: ["When data is missing or confidence is low, say so and give the reason", Never fill the gap with a plausible value]
+    applies_to: [UP-04, UP-05]
+    how_to_check: Fallback answer written and tested
+    status: Proposed
+  - id: GR-05
+    rule: Consent and clearance for personal data
+    means: [Meeting recording mailbox analysis and similar processing only with consent and legal clearance by country]
+    applies_to: [UP-07, SRF-10]
+    how_to_check: Clearance reference for each country
+    status: To confirm
+  - id: GR-06
+    rule: Sensitive data under access rules
+    means: [Competitor prices and other legally sensitive information stored and shared under access rules, A reported value is a claim with a source never a fact]
+    applies_to: [All usage patterns]
+    how_to_check: Access rules for sensitive fields listed
+    status: To confirm
+safeguards:
+  - id: SG-01
+    rule: Provenance on every AI value
+    means: ["Tags: from-prompt, inferred, from-template, user-confirmed, user-edited"]
+    applies_to: [All usage patterns]
+    how_to_check: Provenance tags visible in the mock-up
+    status: Proposed
+    change_proposed: CH-02
+  - id: SG-02
+    rule: Source and freshness on every signal
+    means: [A signal shows its reason and date, Never a bare score]
+    applies_to: [UP-03, UP-01]
+    how_to_check: Source and date shown on each signal
+    status: Proposed
+  - id: SG-03
+    rule: Evaluation before and after release
+    means: [One method to test answer quality before each release, The same method monitors it in production]
+    applies_to: [All build forms]
+    how_to_check: Evaluation set and results attached
+    status: To confirm
+  - id: SG-04
+    rule: Log of every AI write
+    means: [Each write records who confirmed it when and from which proposal, A wrong write can be found and reversed]
+    applies_to: [UP-07, UP-09]
+    how_to_check: Write log defined, with retention
+    status: To confirm

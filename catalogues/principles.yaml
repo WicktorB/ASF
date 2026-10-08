@@ -1,0 +1,13 @@
+# Principles P1 to P11. Cited by ID in dossiers, templates and design reviews.
+items:
+  - {id: P1, principle: Start from the seller's job, practice: "A seller must be able to name what the agent does; if a seller cannot tell two agents apart, they are one agent", dimension: D1}
+  - {id: P2, principle: An agent earns its existence, practice: "An agent needs its own trigger or its own identity; otherwise it is a skill on an existing agent", dimension: D3}
+  - {id: P3, principle: Choose the surface and format before the technology, practice: "Decide where it appears and in which format first, then the build form", dimension: D3}
+  - {id: P4, principle: Use the simplest build form that works, practice: "Prompting, configuration and skills come before a new agent; pro-code only for logic low-code cannot express", dimension: D3}
+  - {id: P5, principle: Compute once, use many times, practice: "Signals are computed in the intelligence layer; each agent decides whether and how to show them", dimension: D4}
+  - {id: P6, principle: AI proposes, the user confirms, practice: "AI proposes values; rule-based logic writes; no write to the CRM without confirmation", dimension: D5}
+  - {id: P7, principle: Every AI value shows its source, practice: "Each value carries a provenance tag: from-prompt, inferred, from-template, user-confirmed, user-edited", dimension: D5}
+  - {id: P8, principle: Every notification leads to an action, practice: "An alert or digest opens the next step in Sales Chat or the record; no dead ends", dimension: D2}
+  - {id: P9, principle: Infer, don't ask, practice: "Structured data is inferred from what the seller says; no field requested only for reporting", dimension: D2}
+  - {id: P10, principle: Execute, don't judge, practice: "Agents carry out what the seller decided; recommending a better action needs a method or a plan to compare against", dimension: D1}
+  - {id: P11, principle: One primary metric per agent, practice: "Each agent reports against one business metric; adoption is a leading indicator, not the outcome", dimension: D1}
