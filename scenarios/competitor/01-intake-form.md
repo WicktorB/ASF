@@ -8,12 +8,12 @@ filled_by: Domain owner (intake request from Samer, CRM Assistant, received 8 Oc
 checked_by: Product team (framing lead)
 discovery_step: 1 · Need
 dimensions: [D1]
-version: 0.2
+version: 0.3
 date: 2026-10-08
 ---
 
 ::: {.readme}
-**In 30 seconds.** Sections A and B: the intake request of Samer, CRM Assistant (filed in `inputs/intake-request-2026-10-08.md`): competitor information given by customers is not recorded on the opportunity lines in bFO. Sections C to E: the ASF product team's first reading. Outcome proposed: standard track, with the request "an agent that scans Outlook and puts the competitors into bFO automatically" tested against the confirmation and clearance rules before any build form is chosen.
+**In 30 seconds.** Sections A and B: the intake request of Samer, CRM Assistant (filed in `inputs/intake-request-2026-10-08.md`): competitor information given by customers is not recorded on the opportunity lines in bFO. Sections C to E: the ASF product team's first reading, updated after the intro call of 30 Sep 2026 (see `02-workshop-guide.md`). Outcome proposed: standard track; no dedicated competitor agent, the request "an agent that scans Outlook and puts the competitors into bFO automatically" becoming seller-validated capture in the post-meeting agent plus suggestions in bFO.
 :::
 
 # Stated by the domain
@@ -49,10 +49,10 @@ _"Today: the competitor list is filled at closed-lost, when it becomes mandatory
 
 | Item | Draft | Source |
 |---|---|---|
-| Job in one sentence | Record the competitors customers mention on the right opportunity line, without sellers re-typing them | (intake request, job draft) |
+| Job in one sentence | Record the competitors customers mention on the right opportunity line, without sellers re-typing them; suggest likely competitors when the opportunity is created | (intake request, job draft; intro call, 3:06 and 29:45) |
 | Seller activity | JM-05 I debrief and keep the CRM up to date. JM-02 is where the information arises; one activity only, to confirm in the workshop | (catalogue JM; intake request) |
 | Persona | Seller: the field seller in EMEA | (intake request; catalogue JM-05) |
-| First idea of the value | Fewer steps (no retyping, P9) and quality (the competitor known during the deal, not only at closed-lost). Primary metric proposed: % of opportunity lines with a competitor recorded (P11); no baseline stated. Question to the owner: is it counted before closed-lost, since closed-lost makes the field mandatory, and what business outcome sits behind it | (intake request; P9, P11) |
+| First idea of the value | Fewer steps (no retyping, P9) and quality (the competitor known during the deal, not only at closed-lost). Primary metric proposed: % of opportunities with a competitor captured by stage 2, Samer's first KPI (intro call, 6:18); the intake says % of opportunity lines, one to choose (P11). No baseline stated. Question to the owner: what business outcome sits behind it | (intake request; intro call; P9, P11) |
 
 ## D · Neighbours in the portfolio · product team analysis
 
@@ -69,9 +69,10 @@ _"Today: the competitor list is filled at closed-lost, when it becomes mandatory
 
 | Check | Result | Status |
 |---|---|---|
-| Track proposed | Standard. The light track is not met: the agent requested is not BF-01 to BF-03 (P2 and P4 are tested at the brief); detection without the seller asking needs a shared component (SC-01); writing to bFO needs the confirmation pattern (GR-01, SC-02); reading mailboxes and calls needs legal clearance by country (GR-05, pending in the request); competitor quotes with prices fall under GR-06 | Proposed; confirmed at the brief |
-| Automatic write | "Automatically" conflicts with GR-01 and P6: the AI proposes, the seller confirms, in one step. To raise with the requester | Open |
+| Track proposed | Standard. The light track is not met: capture lands in the post-meeting agent (BF-04, outside BF-01 to BF-03) and suggestions at creation need a new rule-based flow in bFO (BF-07); a queue of detections would need a shared component (SC-01); writing to bFO needs the confirmation pattern (GR-01, SC-02); reading emails and meeting content needs legal clearance by country (GR-05, pending); competitor quotes with prices fall under GR-06 | Proposed; confirmed at the brief |
+| Automatic write | "Automatically" conflicted with GR-01 and P6. Settled in the call: nothing is written in bFO without the seller's validation (Samer: "a must", intro call, 36:56) | Validated, 30 Sep |
 | Split or group | The win/loss dashboard by competitor for managers is secondary: left out of release 1, to route in the workshop (nearest existing performance view: Sales Command Center, to confirm) | Proposed |
-| To clarify in the intro call | From the request: current figure or target for the metric, date, driver. From the product team: sponsor and brick; what the bFO action lacks; which phone source is meant; how a mention is matched to the right opportunity line when a customer has several | Open |
-| Next step | Intro call of about 30 minutes with Samer; its transcript is filed in `inputs/` and feeds the prefill | _Date to set_ |
+| Clarified in the intro call | The metric: % of opportunities with a competitor captured by stage 2, no figure; the field counts before closed-lost; customer phone calls were not discussed as a source, only notes dictated after a meeting and meeting transcripts; the competitor is a bFO object with line-level competitors | Answered, 30 Sep |
+| Still open | Urgency date and driver; sponsor and brick; whether customer phone calls are a source; what the bFO action lacks; matching a mention to the right line; owner of the competitor referential. Listed with owners in section I of the guide | Open |
+| Next step | Intro call held on 30 Sep (52 min); guide prefilled; workshop of about 60 minutes to confirm overlap, options, flags and success | _Date to set_ |
 | Owner on the product team | Framing lead | — |
