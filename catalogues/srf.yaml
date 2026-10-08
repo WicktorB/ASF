@@ -1,0 +1,149 @@
+# Catalogue SRF · Surfaces and formats. Dimension D3 · Surface and build form.
+# control: We control it | Configurable | Fixed by Microsoft | Not decided
+catalogue: SRF
+title: Surfaces and formats
+dimension: D3
+items:
+  - id: SRF-01
+    surface: CRM record page
+    group: Shown without asking
+    suits: [Record work, AI-enhanced journeys, Insights in context]
+    constraint: Every field is Salesforce development; account and contact objects governed centrally
+    control: We control it
+    formats: [Card, Field update]
+    usual_build_forms: [BF-05, BF-06, BF-07]
+    status: Proposed
+  - id: SRF-02
+    surface: Dashboards (Tableau, CRM reports)
+    group: Shown without asking
+    suits: [Pipeline coverage, Team performance and forecast]
+    constraint: Classic BI, outside the agent portfolio
+    control: We control it
+    formats: [Report view]
+    usual_build_forms: []
+    status: Open
+  - id: SRF-03
+    surface: Sales Chat
+    group: Seller asks
+    suits: [Questions and exploration, Quick capture]
+    constraint: Objects and fields can be added; instructions cannot be customised
+    control: Fixed by Microsoft
+    formats: [Answer, Field update with write-back]
+    usual_build_forms: [BF-01, BF-03]
+    status: Proposed
+    change_proposed: CH-01
+  - id: SRF-04
+    surface: Meeting prep card
+    group: Shown without asking
+    suits: [Briefing before external meetings, Insights in context]
+    constraint: Not on Microsoft's extensible list; custom content needs an extensibility request
+    control: Configurable
+    formats: [Card]
+    usual_build_forms: [BF-02]
+    status: To confirm
+  - id: SRF-05
+    surface: Sales agent side pane (Outlook, Teams)
+    group: Seller acts or produces
+    suits: [Insights beside the email or chat, Capturing contacts roles and status]
+    constraint: Extensible through a partner API, in preview
+    control: Configurable
+    formats: [Card, Field update]
+    usual_build_forms: [BF-02, BF-05]
+    status: To confirm
+  - id: SRF-06
+    surface: Teams notification
+    group: Shown without asking
+    suits: [Alerts and digests, Anything the system initiates]
+    constraint: Cost per notification; Outlook digests are deprecated
+    control: Configurable
+    formats: [Notification]
+    usual_build_forms: [BF-04, BF-06, BF-07]
+    status: Proposed
+  - id: SRF-07
+    surface: Researcher, Analyst
+    group: Seller asks
+    suits: [Open-ended research on accounts industries and data]
+    constraint: Out of the box, not customisable
+    control: Fixed by Microsoft
+    formats: [Answer, Document]
+    usual_build_forms: [BF-01, BF-02]
+    status: Proposed
+  - id: SRF-08
+    surface: LinkedIn Sales Navigator
+    group: Seller asks
+    suits: [Stakeholder mapping, Finding the right contact]
+    constraint: Separate licence; findings stay outside the CRM until captured
+    control: Fixed by Microsoft
+    formats: [Card]
+    usual_build_forms: [BF-02]
+    status: Proposed
+  - id: SRF-09
+    surface: Copilot in M365 apps
+    group: Seller acts or produces
+    suits: [Producing documents and strategies]
+    constraint: Generation cost; the file lives outside the CRM
+    control: Fixed by Microsoft
+    formats: [Document]
+    usual_build_forms: [BF-01, BF-03]
+    status: Proposed
+  - id: SRF-10
+    surface: Mobile and voice
+    group: Seller acts or produces
+    suits: [Capture straight after a meeting]
+    constraint: May not be a surface of its own; voice to CRM depends on write-back
+    control: Not decided
+    formats: [Answer, Field update]
+    usual_build_forms: []
+    status: Open
+  - id: SRF-11
+    surface: Dedicated agents and experiences
+    group: Seller acts or produces
+    suits: [Producing documents, Guided processes]
+    constraint: A new name for the seller to learn; must stay reachable from Sales Chat
+    control: We control it
+    formats: [Document, Answer]
+    usual_build_forms: [BF-04, BF-05]
+    status: Proposed
+  - id: SRF-12
+    surface: Update validation hub
+    group: Seller acts or produces
+    suits: [Validating auto-detected updates such as competitor or opportunity, Surface of SC-01]
+    constraint: Needs a proper UI; hosting app to decide
+    control: We control it
+    formats: [Field update]
+    usual_build_forms: [BF-05, BF-06]
+    status: To confirm
+  - id: SRF-13
+    surface: Content portals
+    group: Seller acts or produces
+    suits: [Sales content, Distributor access]
+    constraint: Sharing with customers out of scope for now
+    control: We control it
+    formats: [Document]
+    usual_build_forms: []
+    status: Proposed
+  - id: SRF-14
+    surface: Copilot / Cowork
+    group: Seller asks
+    suits: [Questions, Exploration, Tasks]
+    constraint: Available, but Sales Chat is the preferred surface
+    control: Fixed by Microsoft
+    formats: [Answer]
+    usual_build_forms: [BF-01, BF-03, BF-04]
+    status: Proposed
+formats:
+  - format: Answer
+    seller_receives: A sourced answer in the conversation
+    usual_surfaces: [SRF-03, SRF-14]
+  - format: Card
+    seller_receives: A short block of insight beside the work
+    usual_surfaces: [SRF-04, SRF-05, SRF-01]
+  - format: Notification
+    seller_receives: One fact, or a digest, pushed to the seller
+    usual_surfaces: [SRF-06]
+  - format: Document
+    seller_receives: An editable draft the seller owns
+    usual_surfaces: [SRF-09, SRF-11]
+  - format: Field update
+    seller_receives: A value proposed, then written after confirmation
+    usual_surfaces: [SRF-01, SRF-12]

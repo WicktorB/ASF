@@ -1,0 +1,91 @@
+# Catalogue JM · Seller activities. Dimension D1 · Seller job and journey.
+# One item per ID. IDs are never renumbered. Status: Proposed | Validated | Open | To confirm.
+catalogue: JM
+title: Seller activities
+dimension: D1
+items:
+  - id: JM-01
+    activity: I plan my day and week
+    group: My day
+    persona: [Seller, Sales manager]
+    seller_says: ["I'm planning my week", "what needs me today?"]
+    served_by: [Sales Digest]
+    usual_patterns: [UP-02, UP-01]
+    status: Proposed
+  - id: JM-02
+    activity: I interact with my customers
+    group: My day
+    persona: [Seller]
+    seller_says: ["I'm answering a customer email"]
+    served_by: [Sales agent side pane, Signature detection, Competitor capture from emails]
+    usual_patterns: [UP-07, UP-03]
+    status: Proposed
+  - id: JM-03
+    activity: I prepare my customer meetings
+    group: My day
+    persona: [Seller, Executive]
+    seller_says: ["I see this customer tomorrow"]
+    served_by: [Meeting Prep, Executive Intelligence]
+    usual_patterns: [UP-02, UP-05]
+    status: Proposed
+  - id: JM-04
+    activity: I meet my customers
+    group: My day
+    persona: [Seller]
+    served_by: [Meet capture (conditional, feeds the post-meeting debrief)]
+    usual_patterns: [UP-09]
+    status: Open
+  - id: JM-05
+    activity: I debrief and keep the CRM up to date
+    group: My day
+    persona: [Seller]
+    seller_says: ["I just left the meeting"]
+    served_by: [Post-meeting, Competitor capture, Voice to CRM (conditional), Data quality suggestions]
+    usual_patterns: [UP-09, UP-07]
+    status: Proposed
+  - id: JM-06
+    activity: I manage and plan my accounts
+    group: My customers and deals
+    persona: [Account owner]
+    served_by: [Account Plan, Sales Chat, Researcher]
+    usual_patterns: [UP-08, UP-05]
+    status: Proposed
+  - id: JM-07
+    activity: I qualify and enrich my leads
+    group: My customers and deals
+    persona: [Inside sales, Seller]
+    seller_says: ["Which leads should I call?"]
+    served_by: [Conversion Assistant, AI lead scoring, Engagement ranking, Customer data enrichment]
+    usual_patterns: [UP-03, UP-01]
+    status: Proposed
+  - id: JM-08
+    activity: I build engaging proposals and offers
+    group: My customers and deals
+    persona: [Seller, Distributor]
+    seller_says: ["I need an offer for this customer"]
+    served_by: [Consultative Selling, Offer and Solution Selling, Proposal Intelligence, Knowledge Inquiry, Content portals]
+    usual_patterns: [UP-08, UP-04]
+    status: Proposed
+  - id: JM-09
+    activity: I move deals forward in my pipeline
+    group: My customers and deals
+    persona: [Seller]
+    seller_says: ["Where are my deals stuck?"]
+    served_by: [Sales Digest alerts, Next best action, Sales Chat]
+    usual_patterns: [UP-01, UP-03]
+    status: Proposed
+  - id: JM-10
+    activity: I get up to speed in a new role
+    group: My role
+    persona: [New or moving seller, Their manager]
+    served_by: [Sales Ramp]
+    usual_patterns: [UP-09, UP-04]
+    status: Proposed
+  - id: JM-11
+    activity: I steer my team
+    group: My role
+    persona: [Sales manager]
+    seller_says: ["How is my team covering its accounts?"]
+    served_by: [Team balance, Sales Digest manager view]
+    usual_patterns: [UP-02, UP-04]
+    status: Proposed

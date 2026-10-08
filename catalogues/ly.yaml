@@ -1,0 +1,89 @@
+# Catalogue LY · Shared layers, SC · Shared components. Dimension D4 · Architecture and shared layers.
+catalogue: LY
+title: Shared layers and components
+dimension: D4
+before_building_anything_shared:
+  - Does the signal or component already exist? Reuse it (P5).
+  - Are two consumers committed? A shared signal for one consumer is an expensive detour.
+  - Who owns it? Every signal needs an owner, definition, refresh cadence and provenance.
+layers:
+  - id: LY-01
+    layer: Data connectivity
+    does: "Extensibility framework; every non-CRM source: IDS, Databook, SFMC, Greenberry, services and finance objects"
+    scenario_uses_it: [Declares the sources it needs, The data estimate sits here]
+    host_brick: Account 360
+    status: Proposed
+  - id: LY-02
+    layer: Intelligence
+    does: "Named signals computed once: engagement rank, saturation gap, white space, coverage gap, propensity; each with owner, definition, refresh cadence and provenance"
+    scenario_uses_it: [Reads existing signals, Proposes a new signal with two committed consumers]
+    host_brick: Lead Excellence
+    status: Proposed
+  - id: LY-03
+    layer: CRM interaction
+    does: Conversational create and edit on Salesforce; confirmation in text rather than a form; proactive nudge
+    scenario_uses_it: [MCP when the model decides what to call, Direct API when the caller already knows]
+    host_brick: CRM Assistant
+    status: Proposed
+  - id: LY-04
+    layer: Guardrails and provenance
+    does: Provenance on every AI value; confirmation pattern (SC-02); update validation hub (SC-01); provenance store (SC-03); evaluation (SC-07)
+    scenario_uses_it: [Reuses the shared components, Applies the rules of D5]
+    host_brick: None today
+    status: Open
+  - id: LY-05
+    layer: Adoption and monitoring
+    does: Copilot licences; single adoption dashboard; token and consumption budget; change management across agents
+    scenario_uses_it: [Reports its primary metric and consumption]
+    host_brick: Account 360
+    status: Proposed
+components:
+  - id: SC-01
+    component: Update validation hub
+    centralizes: "Every update detected by AI, from any source; one queue per seller, one confirmation, one write path to the CRM"
+    use_when: [The scenario detects a CRM change without the seller asking, The change cannot be confirmed where it was detected]
+    layers: [LY-03, LY-04]
+    surface: SRF-12
+    status: Open
+  - id: SC-02
+    component: Confirmation pattern
+    centralizes: One way to accept, edit or reject a proposed value, on every surface
+    use_when: [The scenario writes to the CRM (GR-01)]
+    layers: [LY-04]
+    status: Proposed
+  - id: SC-03
+    component: Provenance store
+    centralizes: Provenance tag, source and date of every AI value
+    use_when: [The scenario shows or writes an AI value (SG-01, SG-02)]
+    layers: [LY-04]
+    status: Proposed
+  - id: SC-04
+    component: Write log
+    centralizes: Who confirmed which write, when, from which proposal; reversal of a wrong write
+    use_when: [The scenario writes to the CRM (SG-04)]
+    layers: [LY-03, LY-04]
+    status: To confirm
+  - id: SC-05
+    component: Signal registry
+    centralizes: Named signals with owner, definition, refresh cadence and consumers
+    use_when: [The scenario reads or proposes a signal (P5)]
+    layers: [LY-02]
+    status: Proposed
+  - id: SC-06
+    component: Notification hub
+    centralizes: "Push messages to the seller: priority, grouping, frequency limits, no duplicates across agents"
+    use_when: [The scenario notifies the seller (UP-01, P8)]
+    layers: [LY-02, LY-05]
+    status: To confirm
+  - id: SC-07
+    component: Evaluation set and method
+    centralizes: Test questions, expected answers and quality thresholds, reused before and after release
+    use_when: [Every scenario with an AI answer (SG-03)]
+    layers: [LY-04]
+    status: Open
+  - id: SC-08
+    component: Adoption and consumption dashboard
+    centralizes: Usage, primary metric and token consumption for all agents
+    use_when: [Every scenario (P11)]
+    layers: [LY-05]
+    status: Proposed

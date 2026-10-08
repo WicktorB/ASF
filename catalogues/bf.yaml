@@ -1,0 +1,71 @@
+# Catalogue BF · Build forms. Dimension D3 · Surface and build form.
+# Default position: compute in the shared layer, render where the moment requires.
+catalogue: BF
+title: Build forms
+dimension: D3
+families:
+  - family: Waits to be asked
+    build_forms: [BF-01, BF-02, BF-03, BF-04, BF-05]
+    fails_when: The seller does not know it exists
+  - family: Shown without being asked
+    build_forms: [BF-06, BF-07]
+    fails_when: "The content is wrong: there is no conversation to challenge it"
+items:
+  - id: BF-01
+    build_form: Prompting
+    choose_when: [The capability exists in a standard agent, The only gap is that sellers do not know how to ask]
+    cost: [No build, Discovery and change management every time]
+    family: Waits to be asked
+    usual_surfaces: [SRF-03, SRF-14]
+    example: Curated prompts for account research
+    status: Proposed
+  - id: BF-02
+    build_form: Configure a standard agent
+    choose_when: ["Microsoft already ships the experience: meeting prep, Researcher, Analyst"]
+    cost: [Licence, Data runs through LY-01 so the estimate sits in another brick]
+    family: Waits to be asked
+    usual_surfaces: [SRF-04, SRF-05, SRF-07]
+    example: Meeting Prep
+    status: Proposed
+  - id: BF-03
+    build_form: Skill and tools (MCP)
+    choose_when: [It answers a question the seller asks, It needs no identity of its own (this is the default), Or it exposes data or an action as an MCP tool that existing agents call]
+    cost: [Build effort only, No new surface so it inherits adoption]
+    family: Waits to be asked
+    usual_surfaces: [SRF-03, SRF-14]
+    example: Team balance
+    status: Proposed
+    change_proposed: CH-06
+  - id: BF-04
+    build_form: Copilot Studio agent
+    choose_when: [It needs its own trigger or its own identity]
+    cost: [Run cost per use, Its own adoption campaign]
+    family: Waits to be asked
+    usual_surfaces: [SRF-06, SRF-14, SRF-11]
+    example: Sales Digest
+    status: Proposed
+    change_proposed: CH-03
+  - id: BF-05
+    build_form: Pro-code through AI Hub
+    choose_when: [Priority rules, Metadata logic, Anything low-code cannot express]
+    cost: [Routed by governance, A queue as well as a capability]
+    family: Waits to be asked
+    usual_surfaces: [SRF-01, SRF-11, SRF-12]
+    example: Knowledge Inquiry (open)
+    status: Proposed
+  - id: BF-06
+    build_form: AI-driven flow
+    choose_when: [The work needs comprehension rather than a rule, The result belongs in a field or card someone else owns]
+    cost: [Low build cost, The seller cannot challenge a wrong answer, May need storage or visualisation]
+    family: Shown without being asked
+    usual_surfaces: [SRF-01, SRF-06, SRF-12]
+    example: Competitor capture on emails
+    status: Proposed
+  - id: BF-07
+    build_form: Rule-based automation
+    choose_when: [The logic can be written as conditions (Power Automate, CRM automation)]
+    cost: [Almost none, Risk of being counted as an agent]
+    family: Shown without being asked
+    usual_surfaces: [SRF-01, SRF-06]
+    example: Duplicate checks on leads
+    status: Proposed

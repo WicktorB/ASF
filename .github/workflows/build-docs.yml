@@ -1,0 +1,23 @@
+name: Build Word and HTML outputs
+on:
+  pull_request:
+    paths: ["docs/**", "templates/**", "scenarios/**", "catalogues/**", "build/**"]
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - uses: actions/setup-node@v4
+        with: { node-version: "20" }
+      - run: sudo apt-get update && sudo apt-get install -y pandoc
+      - run: pip install python-docx pyyaml
+      - run: npm i -g @mermaid-js/mermaid-cli
+      - run: python build/build.py
+      - uses: actions/upload-artifact@v4
+        with: { name: dist, path: dist/ }
+      # Optional: publish dist/ to the SharePoint library (Graph API or a Power Automate flow)
+      # - run: python build/publish_sharepoint.py --site "$SP_SITE" --library "ASF Design Framework"

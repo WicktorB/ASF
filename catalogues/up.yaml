@@ -1,0 +1,88 @@
+# Catalogue UP · Usage patterns. Dimension D2 · Usage pattern.
+catalogue: UP
+title: Usage patterns
+dimension: D2
+choose:
+  - if: The system brings information to the seller without being asked
+    look_at: [UP-01, UP-02, UP-03]
+  - if: The seller asks a question or explores
+    look_at: [UP-04, UP-05, UP-06]
+  - if: The result is a change in the CRM
+    look_at: [UP-07]
+  - if: The result is a document the seller owns
+    look_at: [UP-08]
+  - if: The result is a process carried out across systems
+    look_at: [UP-09]
+items:
+  - id: UP-01
+    pattern: I'm alerted on important facts
+    group: I'm notified and informed
+    examples: [Opportunity slipping, Lost deal detected]
+    seller_gains: Acts before it is too late
+    surfaces: [SRF-06]
+    ui_principle: [One fact one action, Rare]
+    status: Proposed
+  - id: UP-02
+    pattern: I'm briefed on events and overviews
+    group: I'm notified and informed
+    examples: [My pipeline, Tomorrow's meetings]
+    seller_gains: Ready in one minute
+    surfaces: [SRF-06, SRF-04]
+    ui_principle: [Bounded and ranked, Readable in one minute]
+    status: Proposed
+  - id: UP-03
+    pattern: I'm shown insights in context
+    group: I'm notified and informed
+    examples: [Engagement ranking, Propensity and next best action, Data quality flag]
+    seller_gains: Decides with the right signal at hand
+    surfaces: [SRF-01, SRF-04, SRF-05]
+    ui_principle: [Shown where the decision is made, Signal with its reason and freshness, Never a bare score]
+    status: Proposed
+  - id: UP-04
+    pattern: I ask questions
+    group: I seek information
+    examples: [Who decides at this account, More information for tomorrow's meeting]
+    seller_gains: An answer in seconds
+    surfaces: [SRF-03]
+    ui_principle: [Direct sourced answer]
+    status: Proposed
+  - id: UP-05
+    pattern: I explore my ecosystem
+    group: I seek information
+    examples: [Map stakeholders, Research an account or industry]
+    seller_gains: Understands an account or market faster
+    surfaces: [SRF-08, SRF-07, SRF-03]
+    ui_principle: [Open-ended with sources visible, Findings flow into the record in one step]
+    status: Proposed
+  - id: UP-06
+    pattern: I check dashboards
+    group: I seek information
+    examples: [Pipeline coverage, Forecast]
+    seller_gains: Sees trends over time
+    surfaces: [SRF-02]
+    ui_principle: [Stable views comparable over time, "\"Why did this move\" hands off to Sales Chat or Analyst"]
+    status: Open
+  - id: UP-07
+    pattern: I capture or validate data
+    group: I update, act and strategize
+    examples: [New contact or role, Opportunity status, Competitor information]
+    seller_gains: No retyping
+    surfaces: [SRF-05, SRF-10, SRF-03, SRF-12]
+    ui_principle: [One change confirmed in one step, No form on conversational surfaces]
+    status: Proposed
+  - id: UP-08
+    pattern: I produce documents and strategies
+    group: I update, act and strategize
+    examples: [Account plan, Proposal, Campaign]
+    seller_gains: Starts from a draft, not a blank page
+    surfaces: [SRF-11, SRF-09, SRF-01]
+    ui_principle: [Leaves a document the seller owns, Editable draft never final]
+    status: Proposed
+  - id: UP-09
+    pattern: I execute guided processes
+    group: I update, act and strategize
+    examples: [Post-meeting follow-up, Qualify a lead, Create a complex opportunity]
+    seller_gains: Fewer steps forgotten, less admin
+    surfaces: [SRF-11, SRF-01]
+    ui_principle: [Visible steps resumable, Confirmation before any write]
+    status: Proposed
