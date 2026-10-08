@@ -40,6 +40,7 @@ Requirements: `pandoc` 3.x on the path; `mmdc` (mermaid-cli) if diagrams must be
 - Decisions live in section 3.1 of the scenario dossier; 3.2 and 3.3 cite them.
 - IDs are never renumbered; a retired ID is not reused.
 - Status words are the framework's: Validated, Proposed, Open, To confirm, Planned; for checks: Met, Partly, Not met.
+- Branches for scenario work are named `<scenario>-<update>-<version>`, for example `one-plan-segment-dossier-v0.2`: the scenario slug, the file changed (`intake`, `guide`, `dossier`, `checklist`, `extract`), the version it reaches. Other branches: `docs/<page>`, `catalogue/<id>`. A pull request needs one approval; there is no code-owner rule.
 - Language: English for the pack and the dossiers.
 
 ## Versions

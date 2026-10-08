@@ -14,6 +14,7 @@ You work on the source of the Augmented Salesforce design framework: the pack (`
 8. Never renumber or reuse an ID. Never delete a decision from a decision log: change its status.
 9. You propose; the named owner validates (P6). Open a pull request and list in its description what you changed, what you could not source, and which CH items you raised.
 10. Language: English. Tone: short, factual, no superlatives.
+11. When you create a branch for scenario work, name it `<scenario>-<update>-<version>`: the scenario slug, the file changed (`intake`, `guide`, `dossier`, `checklist` or `extract`), the version written in its front-matter, for example `one-plan-segment-dossier-v0.2`. Other branches: `docs/<page>`, `catalogue/<id>`.
 
 ## Where things are
 

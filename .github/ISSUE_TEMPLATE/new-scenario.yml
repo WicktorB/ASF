@@ -1,0 +1,24 @@
+name: "1 · New scenario"
+description: Open a scenario folder from the need validated with the intake assistant. Assign to Copilot to run the skill new-scenario.
+title: "[scenario] <name> · intake"
+labels: [scenario, step-1]
+body:
+  - type: input
+    id: name
+    attributes: { label: Scenario name, placeholder: "One Plan End User" }
+    validations: { required: true }
+  - type: input
+    id: slug
+    attributes: { label: Scenario slug (folder name), placeholder: "one-plan-end-user" }
+    validations: { required: true }
+  - type: textarea
+    id: need
+    attributes:
+      label: Need, as validated with the intake assistant (sections A and B)
+      description: Paste the text version from the intake assistant. It is copied verbatim into A and B, never reformulated.
+    validations: { required: true }
+  - type: textarea
+    id: material
+    attributes: { label: Material shared by the domain (links), description: "Decks, notes, screenshots. Files go to scenarios/<slug>/inputs/." }
+  - type: markdown
+    attributes: { value: "Skill: `new-scenario`. Reviewer: framing lead." }

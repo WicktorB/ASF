@@ -1,0 +1,18 @@
+name: "2 · Prefill workshop guide"
+description: Prefill the workshop guide from the intake, the intro call transcript and the domain's material. Assign to Copilot (skill prefill-workshop-guide).
+title: "[scenario] <slug> · prefill guide"
+labels: [scenario, step-3]
+body:
+  - type: input
+    id: slug
+    attributes: { label: Scenario slug }
+    validations: { required: true }
+  - type: textarea
+    id: inputs
+    attributes: { label: Inputs in scenarios/<slug>/inputs/, description: "List the files: intro call transcript, decks, notes. Never the team's own outputs." }
+    validations: { required: true }
+  - type: input
+    id: workshop
+    attributes: { label: Workshop date }
+  - type: markdown
+    attributes: { value: "Skill: `prefill-workshop-guide`. Reviewer: framing lead, before the workshop." }
